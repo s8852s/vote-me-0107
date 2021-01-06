@@ -1,0 +1,27 @@
+<h1>Index</h1>
+<%= link_to "新增", new_candidate_path %>
+<table>
+  <thead>
+    <tr>
+      <td>姓名</td>
+      <td>年齡</td>
+      <td>政黨</td>
+      <td>政見</td>
+      <td>票數</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @candidates.each do |c| %>
+    <tr>
+      <td><%= c.name %></td>
+      <td><%= c.age %></td>
+      <td><%= c.party %></td>
+      <td><%= c.politics %></td>
+      <td><%= link_to "編輯", edit_candidate_path(c), method: 'post' %>
+      <td><%= link_to "刪除", candidate_path(c), method: 'deletet', data: {confirm: "刪除成功"} %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

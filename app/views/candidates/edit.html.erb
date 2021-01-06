@@ -1,0 +1,31 @@
+<h1>EDIT</h1>
+
+<%= form_for(@candidate) do |form| %>
+<div>
+  <%= form.label :name, "NAME" %>
+  <% = form.text_field :name, "NAME" %>  
+</div>
+
+<div>
+  <%= form.label :age, "AGE" %>
+  <% = form.text_field :age, "AGE" %>  
+</div>
+
+<div>
+  <%= form.label :party, "Party" %>
+  <% = form.text_field :party, "Party" %>  
+</div>
+
+<div>
+  <%= form.label :politics, "Politics" %>
+  <% = form.text_field :politics, "Politics" %>  
+</div>
+
+<%= form.submit %>
+
+
+
+
+
+
+
